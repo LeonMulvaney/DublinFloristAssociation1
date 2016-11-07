@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:src="@drawable/tulip"
+                android:layout_marginBottom="5dp"
+                android:id="@+id/imageView5"
+                android:layout_marginTop="10dp" />
+
+            <TextView
+                android:text="Contact Us"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/textView5"
+                android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+                android:gravity="center"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true"
+                />
+
+            <TextView
+                android:text="Send us any question you have and we'll get back to you as soon as possible!"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/textView6"
+                android:gravity="center"
+                android:layout_marginTop="10dp"
+                android:textAppearance="@style/TextAppearance.AppCompat" />
+
+
+
+            <EditText
+                android:inputType="textShortMessage"
+                android:ems="10"
+                android:id="@+id/subjectInput"
+                android:hint="Email Subject"
+                android:layout_width="300dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="20dp"
+                android:layout_height="wrap_content"
+                android:gravity="top" />
+
+            <EditText
+                android:inputType="textMultiLine"
+                android:ems="10"
+                android:id="@+id/queryInput"
+                android:hint="Email Subject"
+                android:layout_width="300dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="20dp"
+                android:layout_height="wrap_content"
+                android:gravity="top" />
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center">
+
+                <TextView
+                    android:text="Leave a Rating!"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/textView8"
+                    android:textAppearance="@style/TextAppearance.AppCompat"
+                    android:layout_marginTop="10dp"
+                    android:gravity="center" />
+
+                <RatingBar
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/ratingBar" />
+
+                <Button
+                    android:text="Send"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:id="@+id/sendBtn"
+                    android:onClick="sendEmail"
+                    android:background="@drawable/btn1rounded"
+                    style="@style/roseButton"
+                    android:layout_marginBottom="15dp"
+                    />
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>

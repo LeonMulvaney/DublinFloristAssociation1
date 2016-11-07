@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_home"
+            android:icon="@drawable/homeicon"
+            android:title="Home"
+            />
+
+        <item
+            android:id="@+id/nav_catalogue"
+            android:icon="@drawable/catalogueicon"
+            android:title="Catalogue"
+            />
+        <item
+            android:id="@+id/nav_floristsaz"
+            android:icon="@drawable/floristsaz"
+            android:title="Florists A-Z" />
+        <item
+            android:id="@+id/nav_floristsLocation"
+            android:icon="@drawable/floristsbylocationicon"
+            android:title="Florists by Location" />
+        <item
+            android:id="@+id/nav_flowerArchive"
+            android:icon="@drawable/flowerarchiveicon"
+            android:title="Flower Archive" />
+
+        <item
+            android:id="@+id/nav_contact"
+            android:icon="@drawable/contacticon"
+            android:title="Contact Us" />
+
+        <item
+            android:id="@+id/nav_Logout"
+            android:icon="@drawable/logouticon"
+            android:title="Logout" />
+
+    </group>
+
+</menu>

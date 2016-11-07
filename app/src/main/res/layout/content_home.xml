@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/content_nav_drawer_home"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.groupo.dublinfloristassociation.NavDrawerHome"
+    tools:showIn="@layout/app_bar_nav_drawer_home">
+
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+
+
+    <Button
+        android:id="@+id/CatalogueHomeBtn"
+        android:layout_width="fill_parent"
+        android:layout_height="100dp"
+        android:text = "@string/catalogue"
+        android:textColor = "#FFFFFF"
+        android:background= "@drawable/btn2rounded"
+        android:layout_marginBottom="20dp"
+        android:onClick="viewCatalogue"
+
+        />
+
+    <Button
+        android:id="@+id/FloristsAZHomeBtn"
+        android:layout_width="fill_parent"
+        android:layout_height="100dp"
+        android:text = "@string/FloristsAZ"
+        android:textColor = "#FFFFFF"
+        android:background= "@drawable/btn2rounded"
+        android:layout_marginBottom="20dp"
+        android:onClick="viewFloristsAZ"
+
+        />
+
+    <Button
+        android:id="@+id/FloristLocationHomeBtn"
+        android:layout_width="fill_parent"
+        android:layout_height="100dp"
+        android:text = "@string/floristsByLocation"
+        android:textColor = "#FFFFFF"
+        android:background= "@drawable/btn2rounded"
+        android:layout_marginBottom="20dp"
+        />
+
+    <Button
+        android:id="@+id/FlowerTypesHomeBtn"
+        android:layout_width="fill_parent"
+        android:layout_height="100dp"
+        android:text = "@string/flowerArchive"
+        android:textColor = "#FFFFFF"
+        android:background= "@drawable/btn2rounded"
+        android:onClick="viewFlowerArchive"
+        android:layout_marginBottom="20dp"
+        />
+
+        <Button
+            android:id="@+id/ContactHomeBtn"
+            android:layout_width="fill_parent"
+            android:layout_height="100dp"
+            android:text = "@string/contact"
+            android:textColor = "#FFFFFF"
+            android:background= "@drawable/btn2rounded"
+            android:onClick="viewContact"
+            />
+
+    </LinearLayout>
+    </ScrollView>
+
+
+</LinearLayout>

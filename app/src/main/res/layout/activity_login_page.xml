@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_login_page"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.groupo.dublinfloristassociation.LoginPage"
+    android:orientation="vertical"
+    android:weightSum="1"
+ >
+
+    <ImageView
+        android:layout_width="fill_parent"
+        android:layout_height="60dp"
+        android:src="@drawable/tulip"
+        android:layout_marginBottom="5dp"
+        />
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="Dublin Florist Association"
+        android:gravity="center"
+        android:layout_marginBottom="15dp"
+        />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:id="@+id/emailInput"
+        android:inputType="textEmailAddress"
+        android:hint="Enter Email"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:singleLine="false"
+        android:selectAllOnFocus="true"
+        android:layout_weight="0.14"
+        android:layout_marginBottom="15dp"
+        />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="textPassword"
+        android:ems="10"
+        android:id="@+id/passwordInput"
+        android:hint="Enter Password"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:layout_weight="0.16"
+        android:layout_marginBottom="15dp"
+        />
+
+    <Button
+        android:id="@+id/btnLogin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:elevation="0dp"
+        style="@style/roseButton"
+        android:background="@drawable/btn1rounded"
+        android:text="@string/login"
+        android:textAppearance="@style/TextAppearance.AppCompat"
+        android:layout_marginBottom="25dp"
+        android:onClick="viewHome"
+        />
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="20dp"
+        android:text="Not a member?"
+        android:gravity="center"
+        android:layout_marginBottom="5dp"
+        />
+
+    <Button
+        android:id="@+id/btnRegister"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:elevation="0dp"
+        style="@style/roseButton"
+        android:background="@drawable/btn1rounded"
+        android:text="@string/register"
+        android:textAppearance="@style/TextAppearance.AppCompat"
+        android:onClick ="viewRegisterUser"
+        />
+</LinearLayout>
