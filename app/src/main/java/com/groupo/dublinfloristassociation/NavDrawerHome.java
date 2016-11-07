@@ -110,4 +110,9 @@ public class NavDrawerHome extends AppCompatActivity
         startActivity(intent);
     }
 
+    public void viewFlowerArchive(View view){
+        Intent intent = new Intent(this,flowerarchive.class);
+        startActivity(intent);
+    }
+
 }

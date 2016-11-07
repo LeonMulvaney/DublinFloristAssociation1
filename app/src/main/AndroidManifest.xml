@@ -24,13 +24,14 @@
                 <action android:name=".LoginPage" />
             </intent-filter>
         </activity>
-
         <activity
             android:name=".AndroidDatabaseManagerDELETEWHENCOMPLETE"
-            android:theme="@style/Theme.AppCompat.Light"/>
-
-        <activity android:name=".ContactPage"/>
-        <activity android:name=".CataloguePage"/>
+            android:theme="@style/Theme.AppCompat.Light" />
+        <activity android:name=".ContactPage" />
+        <activity android:name=".CataloguePage" />
+        <activity android:name=".flowerarchive" />
+        <activity android:name=".tulip" />
+        <activity android:name=".daffodil"></activity>
     </application>
 
 </manifest>

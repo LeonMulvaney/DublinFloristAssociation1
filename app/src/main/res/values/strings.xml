@@ -20,6 +20,12 @@
     <string name="home">Return to Home</string>
     <!-- Catalogue Section-->
 
+    <!-- Flower Archive Section -->
+    <string name ="daffodilDesc">Narcissus is a genus of perennial herbaceous bulbiferous geophytes, dying back after flowering to an underground storage bulb. They regrow in the following year from brown-skinned ovoid bulbs with pronounced necks, and reach heights of 5–80 cm depending on the species. Dwarf species such as N. asturiensis have a maximum height of 5–8 cm, while Narcissus tazetta may grow as tall as 80 cm.[3][4]
+The plants are scapose, having a single central leafless hollow flower stem (scape). Several green or blue-green, narrow, strap-shaped leaves arise from the bulb. The plant stem usually bears a solitary flower, but occasionally a cluster of flowers (umbel). The flowers, which are usually conspicuous and white or yellow, sometimes both or rarely green, consist of a perianth of three parts. Closest to the stem (proximal) is a floral tube above the ovary, then an outer ring composed of six tepals (undifferentiated sepals and petals), and a central disc to conical shaped corona. The flowers may hang down (pendent), or be erect. There are six pollen bearing stamens surrounding a central style. The ovary is inferior (below the floral parts) consisting of three chambers (trilocular). The fruit consists of a dry capsule that splits (dehisces) releasing numerous black seeds
+The bulb lies dormant after the leaves and flower stem die back and has contractile roots that pull it down further into the soil. The flower stem and leaves form in the bulb, to emerge the following season. Most species are dormant from summer to late winter, flowering in the spring, though a few species are autumn flowering."</string>
+
+    <string name ="tulipDesc">Tulips are spring-blooming perennials that grow from bulbs. Depending on the species, tulip plants can be between 4 inches (10 cm) and 28 inches (71 cm) high. The tulips large flowers usually bloom on scapes with leaves in a rosette at ground level and a single flowering stalk arising from amongst the leaves.Tulip stems have few leaves. Larger species tend to have multiple leaves. Plants typically have two to six leaves, some species up to 12. </string>
 
     <!-- Florists A-Z Section-->
     <string name="southCountyDublin">South County Dublin</string>

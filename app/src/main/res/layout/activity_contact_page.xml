@@ -88,9 +88,9 @@
                     android:id="@+id/ratingBar" />
 
                 <Button
-                    android:text="Send"
                     android:layout_width="fill_parent"
                     android:layout_height="wrap_content"
+                    android:text="Send"
                     android:layout_gravity="center"
                     android:id="@+id/sendBtn"
                     android:onClick="sendEmail"
