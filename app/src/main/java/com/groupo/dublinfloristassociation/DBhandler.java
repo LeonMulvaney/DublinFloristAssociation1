@@ -27,6 +27,12 @@ public class DBhandler extends SQLiteOpenHelper {
     private static final String COLUMN_ADDRESS = "address";
     private static final String COLUMN_PASSWORD = "password";
 
+    // review table attributes
+    public static final String REVIEW_TABLE = "Reviews";
+    private static final String REVIEW_NAME = "name";
+    private static final String COLUMN_REVIEW = "review";
+    private static final String COLUMN_STARS = "stars";
+
     public DBhandler(Context context, String name, SQLiteDatabase.CursorFactory factory, int version) {
         super(context, DATABASE_NAME, factory, DATABASE_VERSION);
     }
@@ -35,7 +41,7 @@ public class DBhandler extends SQLiteOpenHelper {
     //creates table and columns
     @Override
     public void onCreate(SQLiteDatabase db) {
-        String query = "CREATE TABLE " + DATABASE_TABLE + "(" +
+        String users = "CREATE TABLE " + DATABASE_TABLE + "(" +
                 COLUMN_ID + " INTEGER PRIMARY KEY AUTOINCREMENT, " +
                 COLUMN_EMAIL + " TEXT," +
                 COLUMN_NAME + " TEXT," +
@@ -43,8 +49,15 @@ public class DBhandler extends SQLiteOpenHelper {
                 COLUMN_ADDRESS + " TEXT," +
                 COLUMN_PASSWORD + " TEXT" +
                 ");";
+        db.execSQL(users);
 
-        db.execSQL(query);
+        String review = "CREATE TABLE " + REVIEW_TABLE + "(" +
+                COLUMN_ID + " INTEGER PRIMARY KEY AUTOINCREMENT, " +
+                REVIEW_NAME + " TEXT NOT NULL," +
+                COLUMN_REVIEW + " TEXT NOT NULL," +
+                COLUMN_STARS + " INTEGER" +
+                ");";
+        db.execSQL(review);
     }
 
 
@@ -53,6 +66,7 @@ public class DBhandler extends SQLiteOpenHelper {
     public void onUpgrade(SQLiteDatabase db, int i, int i1) {
 
         db.execSQL("DROP TABLE IF EXISTS " + DATABASE_TABLE);
+        db.execSQL("DROP TABLE IF EXISTS " + REVIEW_TABLE);
         onCreate(db);
     }
 
@@ -72,6 +86,19 @@ public class DBhandler extends SQLiteOpenHelper {
                 + " WHERE " + COLUMN_EMAIL + "=\"" + user_email);
     }
 
+    //add new row
+    public boolean addReview(Reviewer r){
+        ContentValues values = new ContentValues();
+        values.put(REVIEW_NAME, r.get_name());
+        values.put(COLUMN_REVIEW, r.get_review());
+        values.put(COLUMN_STARS, r.get_stars());
+
+        SQLiteDatabase db = getWritableDatabase();
+        db.insert(REVIEW_TABLE, null, values);
+
+        db.close();
+        return true;
+    }
 
     public static boolean checkPassword(String password1, String password2)
     {
