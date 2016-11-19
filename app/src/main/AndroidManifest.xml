@@ -17,10 +17,6 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity
-            android:name=".NavDrawerHome"
-            android:label="@string/title_activity_nav_drawer_home"
-            android:theme="@style/AppTheme.NoActionBar" />
         <activity android:name=".RegisterPage">
             <intent-filter>
                 <action android:name=".LoginPage" />
@@ -41,7 +37,8 @@
         <activity android:name=".webViews.roseWebView" />
         <activity android:name=".webViews.bluebellWebView" />
         <activity android:name=".webViews.tulipWebView" />
-        <activity android:name=".webViews.daffodilWebView"></activity>
+        <activity android:name=".webViews.daffodilWebView" />
+        <activity android:name=".Home"></activity>
     </application>
 
 </manifest>

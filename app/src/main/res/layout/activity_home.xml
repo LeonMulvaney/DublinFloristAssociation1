@@ -1,19 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/content_nav_drawer_home"
+    android:id="@+id/activity_home"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:paddingBottom="@dimen/activity_vertical_margin"
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    app:layout_behavior="@string/appbar_scrolling_view_behavior"
-    tools:context="com.groupo.dublinfloristassociation.NavDrawerHome"
-    tools:showIn="@layout/app_bar_nav_drawer_home"
-    android:orientation="vertical">
-
+    tools:context="com.groupo.dublinfloristassociation.Home"
+    android:orientation="vertical"
+    >
 
 
     <LinearLayout
@@ -36,7 +33,7 @@
             android:gravity="center"
             />
 
-        </LinearLayout>
+    </LinearLayout>
 
     <LinearLayout
         android:layout_width="fill_parent"
@@ -63,12 +60,12 @@
 
 
         <ImageButton
-        android:id="@+id/FloristsAZHomeBtn"
+            android:id="@+id/FloristsAZHomeBtn"
             android:layout_width="75dp"
             android:layout_height="75dp"
             android:background="@android:color/transparent"
-        android:src= "@drawable/floristazbtn"
-        android:onClick="viewFloristsAZ"
+            android:src= "@drawable/floristazbtn"
+            android:onClick="viewFloristsAZ"
             android:layout_weight="5"
             android:layout_marginRight="30dp"
             android:layout_marginLeft="30dp"
@@ -105,7 +102,7 @@
 
             />
 
-        </LinearLayout>
+    </LinearLayout>
 
 
     <LinearLayout
@@ -116,18 +113,18 @@
         >
 
 
-    <ImageButton
-        android:id="@+id/FloristLocationHomeBtn"
-        android:layout_width="75dp"
-        android:layout_height="75dp"
-        android:background="@android:color/transparent"
-        android:src = "@drawable/floristlocationbtn"
-        android:layout_weight="0.5"
-        android:layout_marginRight="30dp"
-        android:layout_marginLeft="30dp"
-        android:adjustViewBounds="true"
-        android:scaleType="fitCenter"
-        />
+        <ImageButton
+            android:id="@+id/FloristLocationHomeBtn"
+            android:layout_width="75dp"
+            android:layout_height="75dp"
+            android:background="@android:color/transparent"
+            android:src = "@drawable/floristlocationbtn"
+            android:layout_weight="0.5"
+            android:layout_marginRight="30dp"
+            android:layout_marginLeft="30dp"
+            android:adjustViewBounds="true"
+            android:scaleType="fitCenter"
+            />
 
         <ImageButton
             android:id="@+id/FlowerTypesHomeBtn"
@@ -172,7 +169,7 @@
             android:layout_weight="0.5"
 
             />
-        </LinearLayout>
+    </LinearLayout>
 
 
     <LinearLayout
@@ -240,5 +237,6 @@
             />
 
     </LinearLayout>
+
 
 </LinearLayout>

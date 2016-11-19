@@ -57,7 +57,7 @@ public class LoginPage extends AppCompatActivity {
                             {
                                 Toast.makeText(getApplicationContext(), "You are now logged in.", Toast.LENGTH_LONG).show();
                                 // change screen to the Home page
-                                Intent myIntent = new Intent(getApplicationContext(), NavDrawerHome.class);
+                                Intent myIntent = new Intent(getApplicationContext(), Home.class);
                                 // pass the name of the logged in user to the home page
                                 myIntent.putExtra("user", emailInput.getText().toString());
                                 startActivity(myIntent);
@@ -82,7 +82,7 @@ public class LoginPage extends AppCompatActivity {
     }
 
     public void viewHome(View view) {
-        Intent viewHome = new Intent(this,NavDrawerHome.class);
+        Intent viewHome = new Intent(this,Home.class);
         startActivity(viewHome);
     }
 

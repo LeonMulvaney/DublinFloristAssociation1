@@ -7,6 +7,8 @@ import android.net.Uri;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -54,6 +56,22 @@ public class ContactPage extends AppCompatActivity {
         } catch (android.content.ActivityNotFoundException ex) {
             Toast.makeText(ContactPage.this, "There are no email clients installed.", Toast.LENGTH_SHORT).show();
         }
+    }
+
+    //Create the icons in the Action Bar - i.e. Home button for easy navigation
+    public boolean onCreateOptionsMenu(Menu menu){
+        getMenuInflater().inflate(R.menu.main,menu);
+        return super.onCreateOptionsMenu(menu);
+    }
+
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch(item.getItemId()) {
+            case R.id.actionbarhomebtn:
+                Intent intent = new Intent(this, Home.class);
+                this.startActivity(intent);
+        }
+
+        return true;
     }
 
 

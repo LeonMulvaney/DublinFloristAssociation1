@@ -3,6 +3,8 @@ package com.groupo.dublinfloristassociation;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 
@@ -64,6 +66,22 @@ public class flowerarchive extends AppCompatActivity {
         });
 
 
+    }
+
+    //Create the icons in the Action Bar - i.e. Home button for easy navigation
+    public boolean onCreateOptionsMenu(Menu menu){
+        getMenuInflater().inflate(R.menu.main,menu);
+        return super.onCreateOptionsMenu(menu);
+    }
+
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch(item.getItemId()) {
+            case R.id.actionbarhomebtn:
+                Intent intent = new Intent(this, Home.class);
+                this.startActivity(intent);
+        }
+
+        return true;
     }
 
 

@@ -65,7 +65,7 @@ public class ReviewActivity extends Activity implements RatingBar.OnRatingBarCha
                         r.addReview();
                         Toast.makeText(getApplicationContext(), "Thanks for helping to make the app better!!!!", Toast.LENGTH_LONG).show();
 
-                        Intent myIntent = new Intent(getApplicationContext(), NavDrawerHome.class);
+                        Intent myIntent = new Intent(getApplicationContext(), Home.class);
                         startActivity(myIntent);
 
                     } catch (Exception e) {
