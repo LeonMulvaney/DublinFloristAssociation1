@@ -84,6 +84,7 @@ public class LoginPage extends AppCompatActivity {
     public void viewHome(View view) {
         Intent viewHome = new Intent(this,Home.class);
         startActivity(viewHome);
+        finish();
     }
 
 

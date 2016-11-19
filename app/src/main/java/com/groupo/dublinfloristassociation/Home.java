@@ -57,7 +57,7 @@ public class Home extends AppCompatActivity {
 
 
 
-    public void viewLogin (View view){
+    public void logout (View view){
         Intent intent = new Intent(this,LoginPage.class);
         startActivity(intent);
         Toast toast;

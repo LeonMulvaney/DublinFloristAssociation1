@@ -200,7 +200,7 @@
             android:layout_height="75dp"
             android:background="@android:color/transparent"
             android:src= "@drawable/logoutbtn"
-            android:onClick="viewLogin"
+            android:onClick="logout"
             android:layout_weight="0.5"
             android:layout_marginRight="30dp"
             android:layout_marginLeft="30dp"
