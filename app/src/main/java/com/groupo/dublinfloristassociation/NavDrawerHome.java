@@ -13,6 +13,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.Toast;
 
 public class NavDrawerHome extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
@@ -113,6 +114,19 @@ public class NavDrawerHome extends AppCompatActivity
     public void viewFlowerArchive(View view){
         Intent intent = new Intent(this,flowerarchive.class);
         startActivity(intent);
+    }
+
+    public void viewFloristsAZ (View view){
+        Intent intent = new Intent(this,floristsAZ.class);
+        startActivity(intent);
+    }
+
+    public void viewLogin (View view){
+        Intent intent = new Intent(this,LoginPage.class);
+        startActivity(intent);
+        Toast toast;
+        toast = Toast.makeText(getApplicationContext(), "Thanks for dropping by!", Toast.LENGTH_LONG);
+        toast.show();
     }
 
 }

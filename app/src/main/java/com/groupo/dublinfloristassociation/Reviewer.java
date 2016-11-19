@@ -49,4 +49,6 @@ public class Reviewer {
     public void set_stars(int _stars) {
         this._stars = _stars;
     }
+
+    public void addReview(){};
 }

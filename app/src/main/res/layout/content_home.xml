@@ -11,78 +11,234 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
     tools:context="com.groupo.dublinfloristassociation.NavDrawerHome"
-    tools:showIn="@layout/app_bar_nav_drawer_home">
+    tools:showIn="@layout/app_bar_nav_drawer_home"
+    android:orientation="vertical">
 
-
-    <ScrollView
-        android:layout_width="fill_parent"
-        android:layout_height="fill_parent">
 
 
     <LinearLayout
         android:layout_width="fill_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical">
-
-
-
-    <Button
-        android:id="@+id/CatalogueHomeBtn"
-        android:layout_width="fill_parent"
-        android:layout_height="100dp"
-        android:text = "@string/catalogue"
-        android:textColor = "#FFFFFF"
-        android:background= "@drawable/btn2rounded"
-        android:layout_marginBottom="20dp"
-        android:onClick="viewCatalogue"
-
-        />
-
-    <Button
-        android:id="@+id/FloristsAZHomeBtn"
-        android:layout_width="fill_parent"
-        android:layout_height="100dp"
-        android:text = "@string/FloristsAZ"
-        android:textColor = "#FFFFFF"
-        android:background= "@drawable/btn2rounded"
-        android:layout_marginBottom="20dp"
-        android:onClick="viewFloristsAZ"
-
-        />
-
-    <Button
-        android:id="@+id/FloristLocationHomeBtn"
-        android:layout_width="fill_parent"
-        android:layout_height="100dp"
-        android:text = "@string/floristsByLocation"
-        android:textColor = "#FFFFFF"
-        android:background= "@drawable/btn2rounded"
-        android:layout_marginBottom="20dp"
-        />
-
-    <Button
-        android:id="@+id/FlowerTypesHomeBtn"
-        android:layout_width="fill_parent"
-        android:layout_height="100dp"
-        android:text = "@string/flowerArchive"
-        android:textColor = "#FFFFFF"
-        android:background= "@drawable/btn2rounded"
-        android:onClick="viewFlowerArchive"
-        android:layout_marginBottom="20dp"
-        />
-
-        <Button
-            android:id="@+id/ContactHomeBtn"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="40dp"
+        android:orientation="vertical"
+        >
+        <ImageView
             android:layout_width="fill_parent"
-            android:layout_height="100dp"
-            android:text = "@string/contact"
-            android:textColor = "#FFFFFF"
-            android:background= "@drawable/btn2rounded"
-            android:onClick="viewContact"
+            android:layout_height="75dp"
+            android:src="@drawable/tulip"
+            android:layout_marginBottom="5dp"
+            />
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="20dp"
+            android:text="Dublin Florist Association"
+            android:gravity="center"
+            />
+
+        </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="0dp"
+        >
+
+
+        <ImageButton
+            android:id="@+id/CatalogueHomeBtn"
+            android:layout_width="75dp"
+            android:layout_height="75dp"
+            android:background="@android:color/transparent"
+            android:src= "@drawable/catalogue1btn"
+            android:onClick="viewCatalogue"
+            android:layout_weight="5"
+            android:layout_marginRight="30dp"
+            android:layout_marginLeft="30dp"
+            android:adjustViewBounds="true"
+            android:scaleType="fitCenter"
+
+            />
+
+
+        <ImageButton
+        android:id="@+id/FloristsAZHomeBtn"
+            android:layout_width="75dp"
+            android:layout_height="75dp"
+            android:background="@android:color/transparent"
+        android:src= "@drawable/floristazbtn"
+        android:onClick="viewFloristsAZ"
+            android:layout_weight="5"
+            android:layout_marginRight="30dp"
+            android:layout_marginLeft="30dp"
+            android:adjustViewBounds="true"
+            android:scaleType="fitCenter"
+            />
+
+
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="25dp"
+        android:orientation="horizontal"
+
+        >
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="Catalogue"
+            android:gravity="center"
+            android:layout_weight="0.5"
+            />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="Florists A-Z"
+            android:gravity="center"
+            android:layout_weight="0.5"
+
+            />
+
+        </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="40dp"
+        >
+
+
+    <ImageButton
+        android:id="@+id/FloristLocationHomeBtn"
+        android:layout_width="75dp"
+        android:layout_height="75dp"
+        android:background="@android:color/transparent"
+        android:src = "@drawable/floristlocationbtn"
+        android:layout_weight="0.5"
+        android:layout_marginRight="30dp"
+        android:layout_marginLeft="30dp"
+        android:adjustViewBounds="true"
+        android:scaleType="fitCenter"
+        />
+
+        <ImageButton
+            android:id="@+id/FlowerTypesHomeBtn"
+            android:layout_width="75dp"
+            android:layout_height="75dp"
+            android:background="@android:color/transparent"
+            android:src = "@drawable/flowerarchive1btn"
+            android:onClick="viewFlowerArchive"
+            android:layout_weight="0.5"
+            android:layout_marginRight="30dp"
+            android:layout_marginLeft="30dp"
+            android:adjustViewBounds="true"
+            android:scaleType="fitCenter"
+
+
             />
 
     </LinearLayout>
-    </ScrollView>
 
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="25dp"
+        android:orientation="horizontal"
+        android:layout_marginTop="5dp"
+
+        >
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="Florists By Location"
+            android:gravity="center"
+            android:layout_weight="0.5"
+
+            />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="Flower Archive"
+            android:gravity="center"
+            android:layout_weight="0.5"
+
+            />
+        </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="40dp"
+
+        >
+
+        <ImageButton
+            android:id="@+id/ContactHomeBtn"
+            android:layout_width="75dp"
+            android:layout_height="75dp"
+            android:background="@android:color/transparent"
+            android:src= "@drawable/contact1btn"
+            android:onClick="viewContact"
+            android:layout_weight="0.5"
+            android:layout_marginRight="30dp"
+            android:layout_marginLeft="30dp"
+            android:adjustViewBounds="true"
+            android:scaleType="fitCenter"
+            />
+
+        <ImageButton
+            android:id="@+id/LogoutHomeBtn"
+            android:layout_width="75dp"
+            android:layout_height="75dp"
+            android:background="@android:color/transparent"
+            android:src= "@drawable/logoutbtn"
+            android:onClick="viewLogin"
+            android:layout_weight="0.5"
+            android:layout_marginRight="30dp"
+            android:layout_marginLeft="30dp"
+            android:adjustViewBounds="true"
+            android:scaleType="fitCenter"
+            />
+
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="25dp"
+        android:orientation="horizontal"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="20dp"
+        >
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="Contact"
+            android:gravity="center"
+            android:layout_weight="0.5"
+            />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="Logout"
+            android:gravity="center"
+            android:layout_weight="0.5"
+            />
+
+    </LinearLayout>
 
 </LinearLayout>

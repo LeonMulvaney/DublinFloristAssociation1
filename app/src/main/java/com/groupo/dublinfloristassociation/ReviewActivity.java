@@ -62,7 +62,7 @@ public class ReviewActivity extends Activity implements RatingBar.OnRatingBarCha
                         if (starsInput.getNumStars() == 0) {
                             Toast.makeText(getApplicationContext(), "Why not give us 5 stars?", Toast.LENGTH_SHORT).show();
                         }
-                        db.addReview(r);
+                        r.addReview();
                         Toast.makeText(getApplicationContext(), "Thanks for helping to make the app better!!!!", Toast.LENGTH_LONG).show();
 
                         Intent myIntent = new Intent(getApplicationContext(), NavDrawerHome.class);

@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_florists_az"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.groupo.dublinfloristassociation.floristsAZ"
+    android:weightSum="1"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="157dp"
+        android:orientation="horizontal"
+        android:id="@+id/wrapper"
+        >
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:text=""
+            android:gravity="fill_vertical"
+            android:ems="10"
+            android:id="@+id/floristTV"
+            android:layout_weight="0.5"
+            android:layout_marginBottom="50dp"
+            />
+
+        <ImageView
+        android:id="@+id/floristIV"
+        android:layout_width="fill_parent"
+        android:layout_height="150dp"
+        android:layout_weight="0.5"
+        />
+
+
+    </LinearLayout>
+
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        >
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        >
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="20dp"
+            android:text="Scroll below to view more."
+            android:gravity="center"
+            android:textSize="14sp"
+            />
+
+
+        <Button
+            android:id="@+id/floristBtn1"
+            android:layout_width="fill_parent"
+            android:layout_height="60dp"
+            android:text="Artisan Flowers"
+            android:layout_margin="20dp"
+            android:textColor = "#FFFFFF"
+            android:background= "@drawable/btn2rounded"
+            />
+
+        <Button
+            android:id="@+id/floristBtn2"
+            android:layout_width="fill_parent"
+            android:layout_height="60dp"
+            android:text="All About Flowers"
+            android:layout_margin="20dp"
+            android:textColor = "#FFFFFF"
+            android:background= "@drawable/btn2rounded"
+            />
+
+        <Button
+            android:id="@+id/floristBtn3"
+            android:layout_width="fill_parent"
+            android:layout_height="60dp"
+            android:text="Jackies Florist Ltd"
+            android:layout_margin="20dp"
+            android:textColor = "#FFFFFF"
+            android:background= "@drawable/btn2rounded"
+            />
+
+        <Button
+            android:id="@+id/floristBtn4"
+            android:layout_width="fill_parent"
+            android:layout_height="60dp"
+            android:text="Florist 4"
+            android:layout_margin="20dp"
+            android:textColor = "#FFFFFF"
+            android:background= "@drawable/btn2rounded"
+            />
+
+        <Button
+            android:id="@+id/floristBtn5"
+            android:layout_width="fill_parent"
+            android:layout_height="60dp"
+            android:text="Florist 5"
+            android:layout_margin="20dp"
+            android:textColor = "#FFFFFF"
+            android:background= "@drawable/btn2rounded"
+            />
+
+        <Button
+            android:id="@+id/floristBtn6"
+            android:layout_width="fill_parent"
+            android:layout_height="60dp"
+            android:text="Florist 6"
+            android:layout_margin="20dp"
+            android:textColor = "#FFFFFF"
+            android:background= "@drawable/btn2rounded"
+            />
+
+        <Button
+            android:id="@+id/floristBtn7"
+            android:layout_width="fill_parent"
+            android:layout_height="60dp"
+            android:text="Florist 7"
+            android:layout_margin="20dp"
+            android:textColor = "#FFFFFF"
+            android:background= "@drawable/btn2rounded"
+            />
+
+        <Button
+            android:id="@+id/floristBtn8"
+            android:layout_width="fill_parent"
+            android:layout_height="60dp"
+            android:text="Florist 8"
+            android:layout_margin="20dp"
+            android:textColor = "#FFFFFF"
+            android:background= "@drawable/btn2rounded"
+            />
+
+        <Button
+            android:id="@+id/floristBtn9"
+            android:layout_width="fill_parent"
+            android:layout_height="60dp"
+            android:text="Florist 9"
+            android:layout_margin="20dp"
+            android:textColor = "#FFFFFF"
+            android:background= "@drawable/btn2rounded"
+            />
+
+        <Button
+            android:id="@+id/floristBtn10"
+            android:layout_width="fill_parent"
+            android:layout_height="60dp"
+            android:text="Florist 10"
+            android:layout_margin="20dp"
+            android:textColor = "#FFFFFF"
+            android:background= "@drawable/btn2rounded"
+            />
+
+
+    </LinearLayout>
+    </ScrollView>
+
+
+
+</LinearLayout>

@@ -27,6 +27,7 @@ public class LoginPage extends AppCompatActivity {
 
         // create the object to connect to the db
         dbHandler = new DBhandler(this, null, null, 1);
+        dbHandler.addFlorist();
 
         btnLogin.setOnClickListener(new View.OnClickListener()
         {

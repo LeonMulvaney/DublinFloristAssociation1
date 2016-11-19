@@ -2,6 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.groupo.dublinfloristassociation">
 
+    <uses-permission android:name="android.permission.INTERNET" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -30,8 +32,16 @@
         <activity android:name=".ContactPage" />
         <activity android:name=".CataloguePage" />
         <activity android:name=".flowerarchive" />
-        <activity android:name=".tulip" />
-        <activity android:name=".daffodil"></activity>
+
+        <!-- Internet Connectivity -->
+
+        <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+        <activity android:name=".floristsAZ" />
+        <activity android:name=".webViews.roseWebView" />
+        <activity android:name=".webViews.bluebellWebView" />
+        <activity android:name=".webViews.tulipWebView" />
+        <activity android:name=".webViews.daffodilWebView"></activity>
     </application>
 
 </manifest>

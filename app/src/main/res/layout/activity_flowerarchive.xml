@@ -30,7 +30,6 @@
                 android:textColor = "#FFFFFF"
                 android:background= "#FFB6C1"
                 android:layout_marginBottom="20dp"
-                android:onClick="viewTulip"
                 style="@style/roseButton"
                 />
 
@@ -42,7 +41,6 @@
                 android:textColor = "#FFFFFF"
                 android:background= "#FFDB00"
                 android:layout_marginBottom="20dp"
-                android:onClick="viewDaffodil"
                 style="@style/roseButton"
                 />
 

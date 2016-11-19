@@ -8,6 +8,7 @@ import android.database.SQLException;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 import android.util.Log;
+import android.widget.Button;
 
 import java.util.ArrayList;
 
@@ -17,8 +18,13 @@ import java.util.ArrayList;
 
 public class DBhandler extends SQLiteOpenHelper {
 
+    //Database Version
     private static final int DATABASE_VERSION = 1;
-    private static final String DATABASE_NAME = "floristAppDB.db";
+
+    //Database Name
+    private static final String DATABASE_NAME = "floristAppDB.db"; //Database file - .db extension tells android that a database file is stored here
+
+    //user table
     private static final String DATABASE_TABLE = "userRegisterInfo";
     private static final String COLUMN_ID = "_id";
     private static final String COLUMN_EMAIL = "email";
@@ -32,6 +38,16 @@ public class DBhandler extends SQLiteOpenHelper {
     private static final String REVIEW_NAME = "name";
     private static final String COLUMN_REVIEW = "review";
     private static final String COLUMN_STARS = "stars";
+
+    //Add new Florists A-Z Table
+    public static final String AZ_TABLE = "FloristsAZ";
+    public static final String AZ_ID = "_id";
+    public static final String FLORIST_NAME = "FloristName";
+    public static final String FLORIST_LOCATION = "Location";
+    public static final String FLORIST_PHONE = "Phone";
+    public static final String FLORIST_EMAIL = "Email";
+
+
 
     public DBhandler(Context context, String name, SQLiteDatabase.CursorFactory factory, int version) {
         super(context, DATABASE_NAME, factory, DATABASE_VERSION);
@@ -58,19 +74,152 @@ public class DBhandler extends SQLiteOpenHelper {
                 COLUMN_STARS + " INTEGER" +
                 ");";
         db.execSQL(review);
-    }
 
+        String az = "CREATE TABLE " + AZ_TABLE + "(" +
+                AZ_ID + " INTEGER PRIMARY KEY AUTOINCREMENT, " +
+                FLORIST_NAME + " TEXT," +
+                FLORIST_LOCATION + " TEXT," +
+                FLORIST_PHONE + " TEXT ,"+
+                FLORIST_EMAIL + " TEXT"+
+                ");";
+        db.execSQL(az);
+
+
+
+
+    }
 
     //update table
     @Override
-    public void onUpgrade(SQLiteDatabase db, int i, int i1) {
+    public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
 
         db.execSQL("DROP TABLE IF EXISTS " + DATABASE_TABLE);
         db.execSQL("DROP TABLE IF EXISTS " + REVIEW_TABLE);
+        db.execSQL("DROP TABLE IF EXISTS " + AZ_TABLE);
         onCreate(db);
     }
 
-    // Drop table
+    //Add Florist entry to the database
+    public void addFlorist(){
+       SQLiteDatabase db = getWritableDatabase();
+        //String query = "Insert into FloristsAZ (FloristName,Location,PhoneNumber,Email) Values ('Florist 1','Clondalkin','11221','info@florist1.ie');";
+        String query1 = "INSERT INTO " + AZ_TABLE + "(FloristName,Location,PhoneNumber,Email) Values ('Florist 1','Clondalkin','11221','info@florist1.ie');";
+        db.execSQL("INSERT INTO " + AZ_TABLE + "(" + FLORIST_NAME + "," + FLORIST_LOCATION + "," + FLORIST_PHONE + "," + FLORIST_EMAIL +") VALUES('Artisan Flowers','Ballyowen Castle Shopping Centre, Lucan','086 033 1033','artisanflowersdublin@gmail.com')");
+        db.execSQL("INSERT INTO " + AZ_TABLE + "(" + FLORIST_NAME + "," + FLORIST_LOCATION + "," + FLORIST_PHONE + "," + FLORIST_EMAIL +") VALUES('All Seasons Flowers','Superquinn Shopping Centre, Lucan','01 624 0801','info@allseasonsflowers.ie')");
+        db.execSQL("INSERT INTO " + AZ_TABLE + "(" + FLORIST_NAME + "," + FLORIST_LOCATION + "," + FLORIST_PHONE + "," + FLORIST_EMAIL +") VALUES('Jackies Florist Ltd','Ballyfermot Road, Ballyfermot, Dublin 10','01 626 7666','info@jackiesflorist.ie')");
+
+
+        /*ContentValues values = new ContentValues();
+        values.put(COLUMN_EMAIL,"leonmul96@gmail.com");
+        values.put(COLUMN_NAME, "Leon");
+        values.put(COLUMN_PHONENUM, 1122);
+        values.put(COLUMN_ADDRESS, "Clondalkin");
+        values.put(COLUMN_PASSWORD, "pass");
+
+        SQLiteDatabase db = getWritableDatabase();
+        db.insert(DATABASE_TABLE, null, values); */
+
+        //db.execSQL(query1);
+        db.close();
+
+        //db.execSQL(query2);
+       // db.close();
+    }
+
+
+
+ /*https://github.com/buckyroberts/Source-Code-from-Tutorials/blob/master/Android_Beginners/049-054%20SQLite/49%20to%2054%20SQLite.txt Tutorial Online */
+    public String floristToString1(){
+        String dbString = "";
+        SQLiteDatabase db = getReadableDatabase(); //Could also be getWritableDatabase
+        String query = "SELECT * FROM " + AZ_TABLE + " WHERE " + AZ_ID + "=" + 1;
+
+        //Cursor points to a location in your results
+        Cursor recordSet = db.rawQuery(query, null);
+        //Move to the first row in your results
+        recordSet.moveToFirst();
+
+        //Position after the last row means the end of the results
+        while (!recordSet.isAfterLast()) {
+            // null could happen if we used our empty constructor
+            if (recordSet.getString(recordSet.getColumnIndex("_id")) != null) {
+                dbString += recordSet.getString(recordSet.getColumnIndex("FloristName"));
+                dbString += "\n";
+                dbString += recordSet.getString(recordSet.getColumnIndex("Location"));
+                dbString += "\n";
+                dbString += recordSet.getString(recordSet.getColumnIndex("Phone"));
+                dbString += "\n";
+                dbString += recordSet.getString(recordSet.getColumnIndex("Email"));
+                dbString += "\n";
+            }
+            recordSet.moveToNext();
+        }
+        db.close();
+        return dbString;
+    }
+
+    public String floristToString2(){
+        String dbString = "";
+        SQLiteDatabase db = getReadableDatabase(); //Could also be getWritableDatabase
+        String query = "SELECT * FROM " + AZ_TABLE + " WHERE " + AZ_ID + "=" + 2;
+
+
+        //Cursor points to a location in your results
+        Cursor recordSet = db.rawQuery(query, null);
+        //Move to the first row in your results
+        recordSet.moveToFirst();
+
+        //Position after the last row means the end of the results
+        while (!recordSet.isAfterLast()) {
+            // null could happen if we used our empty constructor
+            if (recordSet.getString(recordSet.getColumnIndex("_id")) != null) {
+                dbString += recordSet.getString(recordSet.getColumnIndex("FloristName"));
+                dbString += "\n";
+                dbString += recordSet.getString(recordSet.getColumnIndex("Location"));
+                dbString += "\n";
+                dbString += recordSet.getString(recordSet.getColumnIndex("Phone"));
+                dbString += "\n";
+                dbString += recordSet.getString(recordSet.getColumnIndex("Email"));
+                dbString += "\n";
+            }
+            recordSet.moveToNext();
+        }
+        db.close();
+        return dbString;
+    }
+
+    public String floristToString3(){
+        String dbString = "";
+        SQLiteDatabase db = getReadableDatabase(); //Could also be getWritableDatabase
+        String query = "SELECT * FROM " + AZ_TABLE + " WHERE " + AZ_ID + "=" + 3;
+
+
+        //Cursor points to a location in your results
+        Cursor recordSet = db.rawQuery(query, null);
+        //Move to the first row in your results
+        recordSet.moveToFirst();
+
+        //Position after the last row means the end of the results
+        while (!recordSet.isAfterLast()) {
+            // null could happen if we used our empty constructor
+            if (recordSet.getString(recordSet.getColumnIndex("_id")) != null) {
+                dbString += recordSet.getString(recordSet.getColumnIndex("FloristName"));
+                dbString += "\n";
+                dbString += recordSet.getString(recordSet.getColumnIndex("Location"));
+                dbString += "\n";
+                dbString += recordSet.getString(recordSet.getColumnIndex("Phone"));
+                dbString += "\n";
+                dbString += recordSet.getString(recordSet.getColumnIndex("Email"));
+                dbString += "\n";
+            }
+            recordSet.moveToNext();
+        }
+        db.close();
+        return dbString;
+    }
+    //Delete product from database
+
+    /* Drop table
     public void dropTable()
     {
         SQLiteDatabase db = getWritableDatabase();
@@ -98,7 +247,7 @@ public class DBhandler extends SQLiteOpenHelper {
 
         db.close();
         return true;
-    }
+    } */
 
     public static boolean checkPassword(String password1, String password2)
     {
@@ -268,7 +417,10 @@ public class DBhandler extends SQLiteOpenHelper {
         {
             return false;
         }
+
     }
+
+
 
 }
 
